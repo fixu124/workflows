@@ -1,86 +1,9 @@
 {
   "id": "cdbb7fb2-53b2-4f09-aaf5-b7805e576bc0",
   "revision": 0,
-  "last_node_id": 71,
-  "last_link_id": 138,
+  "last_node_id": 75,
+  "last_link_id": 140,
   "nodes": [
-    {
-      "id": 23,
-      "type": "VHS_VideoCombine",
-      "pos": [
-        2723.8759765625,
-        -376.53961181640625
-      ],
-      "size": [
-        908.428955078125,
-        1559.4940185546875
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 97
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": null
-        },
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
-        "ver": "0a75c7958fe320efcb052f1d9f8451fd20c730a8",
-        "Node name for S&R": "VHS_VideoCombine"
-      },
-      "widgets_values": {
-        "frame_rate": 30,
-        "loop_count": 0,
-        "filename_prefix": "FramePack",
-        "format": "video/h264-mp4",
-        "pix_fmt": "yuv420p",
-        "crf": 19,
-        "save_metadata": true,
-        "trim_to_audio": false,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "FramePack_00022.mp4",
-            "subfolder": "",
-            "type": "output",
-            "format": "video/h264-mp4",
-            "frame_rate": 30,
-            "workflow": "FramePack_00022.png",
-            "fullpath": "C:\\Misc\\ComfyUI\\ComfyUI\\output\\FramePack_00022.mp4"
-          }
-        }
-      }
-    },
     {
       "id": 12,
       "type": "VAELoader",
@@ -760,106 +683,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 44,
-      "type": "GetImageSizeAndCount",
-      "pos": [
-        2310,
-        -100
-      ],
-      "size": [
-        277.20001220703125,
-        86
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 96
-        }
-      ],
-      "outputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "links": [
-            97,
-            134
-          ]
-        },
-        {
-          "label": "352 width",
-          "name": "width",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "label": "480 height",
-          "name": "height",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "label": "109 count",
-          "name": "count",
-          "type": "INT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "8ecf5cd05e0a1012087b0da90eea9a13674668db",
-        "Node name for S&R": "GetImageSizeAndCount"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 58,
-      "type": "ImageUpscaleWithModel",
-      "pos": [
-        4000,
-        -480
-      ],
-      "size": [
-        340.20001220703125,
-        46
-      ],
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "upscale_model",
-          "type": "UPSCALE_MODEL",
-          "link": 135
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 134
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            136
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.29",
-        "Node name for S&R": "ImageUpscaleWithModel"
-      },
-      "widgets_values": []
-    },
-    {
       "id": 59,
       "type": "UpscaleModelLoader",
       "pos": [
@@ -891,83 +714,6 @@
       "widgets_values": [
         "RealESRGAN_x2.pth"
       ]
-    },
-    {
-      "id": 60,
-      "type": "VHS_VideoCombine",
-      "pos": [
-        3650,
-        -380
-      ],
-      "size": [
-        908.428955078125,
-        1559.4940185546875
-      ],
-      "flags": {},
-      "order": 27,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 136
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": null
-        },
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
-        "ver": "0a75c7958fe320efcb052f1d9f8451fd20c730a8",
-        "Node name for S&R": "VHS_VideoCombine"
-      },
-      "widgets_values": {
-        "frame_rate": 30,
-        "loop_count": 0,
-        "filename_prefix": "FramePack_Upscaled",
-        "format": "video/h264-mp4",
-        "pix_fmt": "yuv420p",
-        "crf": 19,
-        "save_metadata": true,
-        "trim_to_audio": false,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "FramePack_00023.webm",
-            "subfolder": "",
-            "type": "output",
-            "format": "video/webm",
-            "frame_rate": 30,
-            "workflow": "FramePack_00023.png",
-            "fullpath": "C:\\Misc\\ComfyUI\\ComfyUI\\output\\FramePack_00023.webm"
-          }
-        }
-      }
     },
     {
       "id": 70,
@@ -1210,6 +956,244 @@
       ],
       "color": "#332922",
       "bgcolor": "#593930"
+    },
+    {
+      "id": 74,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2720,
+        -380
+      ],
+      "size": [
+        910,
+        334
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 140
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "598e181e97d50174cc18677dfcdaa7b9b6ec0cb2",
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 30,
+        "loop_count": 0,
+        "filename_prefix": "Framepack",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      }
+    },
+    {
+      "id": 75,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        3650,
+        -380
+      ],
+      "size": [
+        910,
+        334
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 139
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "598e181e97d50174cc18677dfcdaa7b9b6ec0cb2",
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 30,
+        "loop_count": 0,
+        "filename_prefix": "Framepack Upscaled",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      }
+    },
+    {
+      "id": 58,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        4000,
+        -480
+      ],
+      "size": [
+        340.20001220703125,
+        46
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 135
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            139
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.29",
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 44,
+      "type": "GetImageSizeAndCount",
+      "pos": [
+        2310,
+        -100
+      ],
+      "size": [
+        277.20001220703125,
+        86
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 96
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            134,
+            140
+          ]
+        },
+        {
+          "label": "352 width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "480 height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "109 count",
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "8ecf5cd05e0a1012087b0da90eea9a13674668db",
+        "Node name for S&R": "GetImageSizeAndCount"
+      },
+      "widgets_values": []
     }
   ],
   "links": [
@@ -1266,14 +1250,6 @@
       33,
       0,
       44,
-      0,
-      "IMAGE"
-    ],
-    [
-      97,
-      44,
-      0,
-      23,
       0,
       "IMAGE"
     ],
@@ -1374,14 +1350,6 @@
       "UPSCALE_MODEL"
     ],
     [
-      136,
-      58,
-      0,
-      60,
-      0,
-      "IMAGE"
-    ],
-    [
       137,
       56,
       0,
@@ -1396,6 +1364,22 @@
       39,
       2,
       "CONDITIONING"
+    ],
+    [
+      139,
+      58,
+      0,
+      75,
+      0,
+      "IMAGE"
+    ],
+    [
+      140,
+      44,
+      0,
+      74,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [
@@ -1404,7 +1388,7 @@
       "title": "Upscaler",
       "bounding": [
         3640,
-        -553.5999755859375,
+        -550,
         928.4287109375,
         1743.093994140625
       ],
@@ -1416,10 +1400,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.116781577942496,
+      "scale": 0.6934334949441483,
       "offset": [
-        -492.5151176329928,
-        446.9150151114588
+        -205.05863143292692,
+        963.8782730665006
       ]
     },
     "frontendVersion": "1.16.9",
